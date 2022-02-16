@@ -1,0 +1,13 @@
+h2, p {
+	color: #eee7deff;
+}
+
+ .nav-item .nav-link:hover,
+ .nav-item .nav-link:active {
+  color: #ffd166ff;
+  background-color: #0fc8acff;
+  border-color: #0fc8acff;
+}
+.nav-item .nav-link.active {
+  color: #ef476f !important;
+}

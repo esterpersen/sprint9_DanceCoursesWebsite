@@ -1,0 +1,16 @@
+.lessonSection {
+  margin: auto;
+  padding: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#theory {
+  color: #0fc8acff;
+}
+#practice {
+  color: #ffd166ff;
+}
+#testTitle {
+  color: #ef476f;
+}

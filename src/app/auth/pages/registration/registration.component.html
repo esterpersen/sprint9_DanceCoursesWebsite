@@ -1,0 +1,74 @@
+<div class="container-fluid ps-md-0">
+	<div class="row g-0">
+		<div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+		<div class="col-md-8 col-lg-6">
+			<div class="login d-flex align-items-center py-5">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-9 col-lg-8 mx-auto">
+							<h3 class="login-heading mb-4">Create an account</h3>
+							<!-- Registration Form -->
+							<form [formGroup]="registrationForm">
+
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control" id="registrationUserName"
+										formControlName="registrationUserName" placeholder="myusername" autofocus>
+									<label for="registrationUserName">Username</label>
+									<div *ngIf="registrationForm.controls['registrationUserName'].invalid && (registrationForm.controls['registrationUserName'].dirty || registrationForm.controls['registrationUserName'].touched)"
+										class="alert alert-danger">
+										<div
+											*ngIf="registrationForm.controls['registrationUserName'].errors?.['required']">
+											És obligatori.</div>
+										<div
+											*ngIf="registrationForm.controls['registrationUserName'].errors?.['minlength']">
+											Insereix un username vàlid (mínim 2 caràcters).</div>
+									</div>
+								</div>
+
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="registratiomEmail"
+										placeholder="name@example.com" name="registratiomEmail"
+										formControlName="registratiomEmail">
+									<label for="registratiomEmail" class="form-label">Email address</label>
+									<div *ngIf="registrationForm.controls['registratiomEmail'].invalid && (registrationForm.controls['registratiomEmail'].dirty || registrationForm.controls['registratiomEmail'].touched)"
+										class="alert alert-danger">
+										<div
+											*ngIf="registrationForm.controls['registratiomEmail'].errors?.['required']">
+											És obligatori.</div>
+										<div *ngIf="registrationForm.controls['registratiomEmail'].errors?.['email']">
+											Insereix un email vàlid.
+										</div>
+									</div>
+								</div>
+
+								<div class="form-floating mb-3">
+									<input type="password" class="form-control" id="registrationPassw"
+										placeholder="Password" name="registrationPassw"
+										formControlName="registrationPassw">
+									<label for="registrationPassw">Password</label>
+									<div *ngIf="registrationForm.controls['registrationPassw'].invalid && (registrationForm.controls['registrationPassw'].dirty || registrationForm.controls['registrationPassw'].touched)"
+										class="alert alert-danger">
+										<div
+											*ngIf="registrationForm.controls['registrationPassw'].errors?.['required']">
+											És obligatori.</div>
+										<div *ngIf="registrationForm.controls['registrationPassw'].errors?.['pattern']">
+											Insereix com a mínim 8 caràcters, 1 majúscula, 1 minúscula, i 1 número.
+										</div>
+									</div>
+								</div>
+							</form>
+							<div class="d-grid">
+								<button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"
+									type="button" (click)="registration(); reset(registrationForm)" routerLink="/cursos"
+									[disabled]="!registrationForm.valid">Register</button>
+							</div>
+							<hr class="my-4">
+							<a class="d-block text-center mt-2 small" href="#" routerLink="/auth/login">Have an account?
+								Sign In</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

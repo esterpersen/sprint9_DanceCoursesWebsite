@@ -1,0 +1,53 @@
+<div class="lessonSection">
+	<h3 class="display-5" id="theory">THEORY</h3>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+	<div class="col" *ngFor="let theory of currentLesson.theory">
+		<div class="card h-100 mb-1" style="max-width: 100%;">
+			<div class="row g-0">
+				<div class="col-md-6">
+					<img src="../../../../assets/logo.jpeg" class="img-fluid rounded-start" alt="...">
+				</div>
+				<div class="col-md-6">
+					<div class="card-body">
+						<h5 class="card-title">{{theory.theoryName}}</h5>
+						<p class="card-text">{{theory.description}}</p>
+						Img src: {{theory.img}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="lessonSection">
+	<h3 class="display-5" id="practice">PRACTICE</h3>
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+	<div class="col" *ngFor="let practice of currentLesson.practice">
+		<div class="card h-100">
+			<img src="../../../../assets/logo.jpeg" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">{{practice.practiceName}}</h5>
+				<p class="card-text">{{practice.description}}</p>
+				<p class="card-text">{{practice.timing}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="lessonSection">
+	<h3 class="display-5" id="testTitle">TEST</h3>
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+	<div class="col" *ngFor="let test of currentLesson.test">
+		<div class="card h-100">
+			<img src="../../../../assets/logo.jpeg" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">{{test.testName}}</h5>
+				<p class="card-text">{{test.description}}</p>
+				<p class="card-text">{{test.timing}}</p>
+			</div>
+		</div>
+	</div>
+</div>

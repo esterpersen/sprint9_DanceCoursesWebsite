@@ -1,0 +1,55 @@
+<div class="container-fluid ps-md-0">
+	<div class="row g-0">
+		<div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+		<div class="col-md-8 col-lg-6">
+			<div class="login d-flex align-items-center py-5">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-9 col-lg-8 mx-auto">
+							<h3 class="login-heading mb-4">Sign in!</h3>
+							<!-- Sign In Form -->
+							<form [formGroup]="loginForm">
+								<div class="form-floating mb-3">
+									<input type="email" class="form-control" id="loginEmail"
+										placeholder="name@example.com" name="loginEmail" formControlName="loginEmail">
+									<label for="loginEmail" class="form-label">Email address</label>
+									<div *ngIf="loginForm.controls['loginEmail'].invalid && (loginForm.controls['loginEmail'].dirty || loginForm.controls['loginEmail'].touched)"
+										class="alert alert-danger">
+										<div *ngIf="loginForm.controls['loginEmail'].errors?.['required']">És
+											obligatori.</div>
+										<div *ngIf="loginForm.controls['loginEmail'].errors?.['email']">Insereix un
+											email vàlid.
+										</div>
+									</div>
+								</div>
+								<div class="form-floating mb-3">
+									<input type="password" class="form-control" id="loginPassw" placeholder="Password"
+										name="loginPassw" formControlName="loginPassw">
+									<label for="loginPassw">Password</label>
+									<div *ngIf="loginForm.controls['loginPassw'].invalid && (loginForm.controls['loginPassw'].dirty || loginForm.controls['loginPassw'].touched)"
+										class="alert alert-danger">
+										<div *ngIf="loginForm.controls['loginPassw'].errors?.['required']">És
+											obligatori.</div>
+										<div *ngIf="loginForm.controls['loginPassw'].errors?.['pattern']">Insereix com a
+											mínim 8
+											caràcters, 1 majúscula, 1 minúscula, i 1 número.</div>
+									</div>
+								</div>
+							</form>
+
+							<div class="d-grid">
+								<button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"
+									type="button" (click)="login(); reset(loginForm)" routerLink="/cursos"
+									[disabled]="!loginForm.valid">Sign
+									in</button>
+								<hr class="my-4">
+								<a class="d-block text-center mt-2 small" href="#" routerLink="/auth/registration">Don't
+									have an account? Create one in 10 seconds!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

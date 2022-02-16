@@ -1,0 +1,14 @@
+<!-- BOTONS LOGIN & REGISTRE -->
+<div *ngIf="!loggedInUser" class="btn-group !spacing" role="group" aria-label="sessionButtons">
+	<button class="btn btn-primary authBtn" routerLink="/auth/login">login</button>
+	<button class="btn btn-primary authBtn" routerLink="/auth/registration">registration</button>
+</div>
+
+<!-- NOM USUARI & LOGOUT -->
+<div id="logOut" *ngIf="loggedInUser">
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-light logout" routerLink="/cursos/userPage" routerLinkActive="router-link-active">My courses</button>
+		<button type="button" class="btn btn-light" (click)=logout() routerLink="userPage"
+			routerLinkActive="router-link-active">Logout</button>
+	</div>
+</div>

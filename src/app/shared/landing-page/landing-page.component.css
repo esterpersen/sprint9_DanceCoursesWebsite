@@ -1,0 +1,182 @@
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+#about .content .icon-box h4 {
+  /* font-size: 30px; */
+  font-weight: 400;
+}
+
+#about .content .icon-box i {
+  font-size: 48px;
+  color: #ffd166ff;
+}
+
+#about .content .icon-box p {
+  font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# services
+--------------------------------------------------------------*/
+#services {
+  background-color: #eee7deff;
+}
+
+#services p {
+  font-size: medium;
+}
+
+#services .content i {
+  font-size: 48px;
+  color: #0fc8acff;
+}
+
+/*--------------------------------------------------------------
+# testimonials
+--------------------------------------------------------------*/
+.testimonials {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+/*--------------------------------------------------------------
+# pricing
+--------------------------------------------------------------*/
+#availableCourses {
+  background: #ffd166ff;
+  margin-bottom: 0;
+}
+
+.pricing .card {
+  text-align: start;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.card-footer {
+  background-color: transparent;
+}
+
+/* Hover Effects on Card */
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -0.25rem;
+    /* margin-bottom: 0.25rem; */
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
+# portfolio
+--------------------------------------------------------------*/
+#portfolio {
+  padding-top: 4rem;
+  background-color: #ef476f;
+}
+
+#portfolio b {
+  color: #ffd166ff;
+}
+/* ffd166ff groc */
+
+#portfolio img {
+  width: fit-content;
+}
+
+#portfolio .portfolio-box-caption .project-name {
+  font-size: medium;
+}
+#portfolio .portfolio-box-caption .project-category {
+  font-size: large;
+}
+
+/*--------------------------------------------------------------
+# accordion
+--------------------------------------------------------------*/
+#faqs {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #0fc8acff;
+}
+
+#faqs .accordion-button:not(.collapsed) {
+  background-color: #006d77ff;
+  color: #ffd166ff;
+}
+
+/*--------------------------------------------------------------
+# contact
+--------------------------------------------------------------*/
+#contact .contactDetails .emailInfo i {
+  font-size: 48px;
+  color: #ffd166ff;
+}
+#contact .contactDetails .emailInfo a#emailLink {
+  color: #ffd166ff;
+}
